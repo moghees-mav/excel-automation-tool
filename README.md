@@ -1,5 +1,6 @@
 # excel-automation-tool
-it is a proof of skill project
+it is a proof of skill project.
+
 A Python tool that cleans raw Excel data and generates automated summary reports for small business workflows
 this tool will
 - reads excel file
