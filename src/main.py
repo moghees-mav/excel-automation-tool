@@ -1,8 +1,16 @@
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
+import sys
+import os
 
-df = pd.read_excel('data/input.xlsx')
+input_file = sys.argv[1] if len(sys.argv) > 1 else 'data/input.xlsx'
+
+if not os.path.exists(input_file):
+    print(f"Error: File '{input_file}' not found.")
+    sys.exit(1)
+
+df = pd.read_excel(input_file)
 
 df = df.dropna(how='all')
 df = df.drop_duplicates()

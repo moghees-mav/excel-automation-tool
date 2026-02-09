@@ -9,8 +9,22 @@ this tool will
 
 designed as a quick tool for business/indv who works with messy files
 
-##status
-under development
+## How to use
+
+1. Install requirements:
+pip install -r requirements.txt
+
+2. Place your Excel file anywhere (example: data/input.xlsx)
+
+3. Run:
+python src/main.py data/input.xlsx
+
+4. Output file will be created at:
+data/output.xlsx
+
+With two sheets:
+- CleanedData
+- Summary
 
 ## Changelog
 
@@ -19,6 +33,9 @@ under development
 - Added automatic row height adjustment based on content
 - Column width capped at 50 characters for readability
 - Row height scales with multi-line cell content
+- Dynamic input file referencing via command-line argument
+- File existence error handling with user-friendly messages
+- Default input path (data/input.xlsx) when no argument provided
 
 ### v0.1.0 - Initial Release
 - Excel file reading and writing
